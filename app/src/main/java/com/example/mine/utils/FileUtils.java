@@ -1,4 +1,4 @@
-package com.example.mine.file;
+package com.example.mine.utils;
 
 import android.content.ContentResolver;
 import android.content.ContentUris;

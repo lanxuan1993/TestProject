@@ -1,4 +1,4 @@
-package com.example.mine.utils;
+package com.example.mine.permission;
 
 import android.app.Activity;
 

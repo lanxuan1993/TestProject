@@ -1,4 +1,4 @@
-package com.example.mine.density;
+package com.example.mine.utils;
 
 import android.content.Context;
 import android.util.TypedValue;

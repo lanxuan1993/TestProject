@@ -9,7 +9,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mine.databinding.ActivityMainBinding;
-import com.example.mine.utils.PermissionUtils;
+import com.example.mine.permission.PermissionUtils;
 
 import static android.Manifest.permission.ACCESS_BACKGROUND_LOCATION;
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;

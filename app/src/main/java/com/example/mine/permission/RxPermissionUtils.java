@@ -1,4 +1,4 @@
-package com.example.mine.utils;
+package com.example.mine.permission;
 
 import androidx.fragment.app.FragmentActivity;
 
