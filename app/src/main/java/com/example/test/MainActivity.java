@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 //                ActivityCompat.requestPermissions(MainActivity.this, location, 100);
 
 //                PermissionUtils.requestPermission(MainActivity.this,location);
-                PermissionUtils.requestPermission(MainActivity.this,location1);
+                PermissionUtils.requestPermissions(MainActivity.this,location1,100);
             }
         });
 

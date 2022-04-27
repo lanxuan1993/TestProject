@@ -12,7 +12,6 @@ public class RxPermissionUtils {
 
     private static RxPermissionUtils sInstance = null;
 
-
     public static RxPermissionUtils getInstance() {
         if (sInstance == null) {
             synchronized (RxPermissionUtils.class) {
@@ -23,7 +22,6 @@ public class RxPermissionUtils {
         }
         return sInstance;
     }
-
 
     private RxPermissionUtils() {
     }

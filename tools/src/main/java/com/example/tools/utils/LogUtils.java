@@ -4,7 +4,9 @@ import android.util.Log;
 
 import com.example.tools.BuildConfig;
 
-
+/**
+ * 日志工具类
+ */
 public final class LogUtils {
 
     public static void v(String tag, String msg) {

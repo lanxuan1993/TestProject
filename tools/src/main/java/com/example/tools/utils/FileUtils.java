@@ -16,6 +16,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * 文件操作工具类
+ */
 public class FileUtils {
     public static final String TAG = "FileUtils";
 
