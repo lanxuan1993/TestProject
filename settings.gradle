@@ -2,3 +2,4 @@ rootProject.name = "TestApplication"
 include ':app'
 include ':tools'
 include ':mvp_demo'
+include ':widget'

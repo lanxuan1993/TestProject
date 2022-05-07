@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestApplication</string>
+    <string name="main_home">首頁</string>
+    <string name="main_category">分類</string>
+    <string name="main_service">服務</string>
+    <string name="main_mine">我</string>
+</resources>

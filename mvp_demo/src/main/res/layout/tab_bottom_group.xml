@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rg_tab"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <RadioButton
+        android:id="@+id/rb_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:button="@null"
+        android:checked="true"
+        android:drawableTop="@drawable/main_btn_home"
+        android:gravity="center"
+        android:text="首页"
+        android:textColor="@drawable/selector_tab_color"
+        android:textSize="12sp" />
+
+    <RadioButton
+        android:id="@+id/rb_action"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:button="@null"
+        android:drawableTop="@drawable/main_btn_service"
+        android:gravity="center"
+        android:text="服务"
+        android:textColor="@drawable/selector_tab_color"
+        android:textSize="12sp" />
+
+    <RadioButton
+        android:id="@+id/rb_study"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:button="@null"
+        android:drawableTop="@drawable/main_btn_discover"
+        android:gravity="center"
+        android:text="发现"
+        android:textColor="@drawable/selector_tab_color"
+        android:textSize="12sp" />
+
+    <RadioButton
+        android:id="@+id/rb_mine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:button="@null"
+        android:drawableTop="@drawable/main_btn_mine"
+        android:gravity="center"
+        android:text="我的"
+        android:textColor="@drawable/selector_tab_color"
+        android:textSize="12sp" />
+</RadioGroup>

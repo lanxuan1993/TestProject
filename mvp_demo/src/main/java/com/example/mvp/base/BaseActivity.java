@@ -1,6 +1,8 @@
 package com.example.mvp.base;
 
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,23 +12,28 @@ import androidx.appcompat.app.AppCompatActivity;
  * description: activity基类
  */
 public abstract class BaseActivity<P extends BasePresenter>
-        extends AppCompatActivity{
+        extends AppCompatActivity {
 
     protected P mPresenter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutResId());
+        if (getLayoutView() != null) {
+            setContentView(getLayoutView());
+        } else {
+            setContentView(getLayoutResId());
+        }
         //创建Presenter
         mPresenter = createPresenter();
         //绑定View
         mPresenter.attachView((BaseView) this);
-
         initData();
         initView();
         business();
     }
+
+    protected abstract View getLayoutView();
 
     protected abstract int getLayoutResId();
 
