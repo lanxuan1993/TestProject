@@ -1,6 +1,7 @@
 package com.example.tools.utils;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.util.TypedValue;
 
 /**
@@ -41,5 +42,15 @@ public class DensityUtil {
      */
     public static float px2sp(Context context, float pxVal) {
         return (pxVal / context.getResources().getDisplayMetrics().scaledDensity);
+    }
+
+    /**
+     * 获取设备密度
+     * @return
+     */
+    public static float getDeviceDpi(Context context){
+        DisplayMetrics dm = new DisplayMetrics();
+        dm = context.getResources().getDisplayMetrics();
+        return dm.density;
     }
 }

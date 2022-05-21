@@ -1,6 +1,6 @@
 package com.example.mvp.module.main.contract;
 
-import com.example.mvp.base.BaseView;
+import com.mvp.base.BaseView;
 
 /**
  * 契约：连接M,V,P三层（通过接口实现的方式）

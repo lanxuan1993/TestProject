@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.test.databinding.ActivityMainBinding;
-import com.example.tools.language.LanguageUtils;
+import com.example.tools.utils.LanguageUtils;
 import com.example.tools.permission.PermissionUtils;
 
 import static android.Manifest.permission.ACCESS_BACKGROUND_LOCATION;

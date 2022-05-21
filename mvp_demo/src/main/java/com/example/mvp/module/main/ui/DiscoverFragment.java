@@ -3,7 +3,7 @@ package com.example.mvp.module.main.ui;
 import android.util.Log;
 
 import com.example.mvp.R;
-import com.example.mvp.base.BaseFragment;
+import com.mvp.base.BaseFragment;
 
 public class DiscoverFragment extends BaseFragment {
     private static final String TAG = DiscoverFragment.class.getSimpleName();
@@ -34,7 +34,7 @@ public class DiscoverFragment extends BaseFragment {
     }
 
     @Override
-    protected void business() {
+    protected void requestData() {
 
     }
 

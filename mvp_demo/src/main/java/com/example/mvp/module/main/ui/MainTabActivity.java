@@ -14,13 +14,13 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.mvp.R;
-import com.example.mvp.base.BaseActivity;
 import com.example.mvp.databinding.ActivityMainTabBinding;
 import com.example.mvp.module.main.adapter.MainTabPagerAdapter;
 import com.example.mvp.module.main.contract.MainContract;
 import com.example.mvp.module.main.presenter.MainPresenter;
 import com.example.widget.textview.CustomTextView;
 import com.google.android.material.tabs.TabLayout;
+import com.mvp.base.BaseActivity;
 
 import java.util.ArrayList;
 
@@ -90,7 +90,7 @@ public class MainTabActivity extends BaseActivity<MainPresenter>
     }
 
     @Override
-    protected void business() {
+    protected void requestData() {
 
     }
 

@@ -3,7 +3,7 @@ package com.example.mvp.module.login.ui;
 import android.view.View;
 
 import com.example.mvp.R;
-import com.example.mvp.base.BaseActivity;
+import com.mvp.base.BaseActivity;
 import com.example.mvp.module.login.presenter.LoginPresenter;
 import com.example.mvp.module.login.contract.LoginContract;
 
@@ -26,7 +26,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter>
     }
 
     @Override
-    protected void business() {
+    protected void requestData() {
        mPresenter.login("","");
     }
 

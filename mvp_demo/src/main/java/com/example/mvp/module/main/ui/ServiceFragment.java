@@ -2,15 +2,11 @@ package com.example.mvp.module.main.ui;
 
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.example.mvp.R;
-import com.example.mvp.base.BaseFragment;
+import com.mvp.base.BaseFragment;
+
 
 public class ServiceFragment extends BaseFragment {
 
@@ -59,7 +55,7 @@ public class ServiceFragment extends BaseFragment {
     }
 
     @Override
-    protected void business() {
+    protected void requestData() {
 
     }
 

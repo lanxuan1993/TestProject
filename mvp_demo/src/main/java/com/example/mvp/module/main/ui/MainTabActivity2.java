@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Lifecycle;
 
 import com.example.mvp.R;
-import com.example.mvp.base.BaseActivity;
+import com.mvp.base.BaseActivity;
 import com.example.mvp.databinding.ActivityMainTab2Binding;
 import com.example.mvp.databinding.TabBottomGroupBinding;
 import com.example.mvp.module.main.contract.MainContract;
@@ -156,7 +156,7 @@ public class MainTabActivity2 extends BaseActivity<MainPresenter>
     }
 
     @Override
-    protected void business() {
+    protected void requestData() {
 
     }
 

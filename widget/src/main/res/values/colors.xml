@@ -7,4 +7,34 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--手势密码-->
+    <!--默认中心点颜色-->
+    <color name="default_point_color">#DDE0E5</color>
+    <!--默认中间圆环颜色-->
+    <color name="default_circle_color">#00000000</color>
+    <!--默认最外层圆圈边框颜色-->
+    <color name="default_border_circle_color">#FFFFFF</color>
+    <!--正确中心点颜色-->
+    <color name="right_point_color">#D29C5F</color>
+    <!--正确中间圆环颜色-->
+    <color name="right_circle_color">#F9F3EB</color>
+    <!--正确最外层圆圈边框颜色-->
+    <color name="right_border_circle_color">#F9F3EB</color>
+    <!--正确连接线颜色-->
+    <color name="right_link_color">#D29C5F</color>
+    <!--错误中心点颜色-->
+    <color name="error_point_color">#D44748</color>
+    <!--错误中间圆环颜色-->
+    <color name="error_circle_color">#FDF2F2</color>
+    <!--错误最外层圆圈边框颜色-->
+    <color name="error_border_circle_color">#FDF2F2</color>
+    <!--错误连接线颜色-->
+    <color name="error_link_color">#D44748</color>
+
+    <!--指纹登录-->
+    <color name="success_color">#009688</color>
+    <color name="error_red">#FFD44748</color>
+    <color name="black33">#ff333333</color>
+
 </resources>
