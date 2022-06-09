@@ -28,7 +28,7 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View mRootView = inflater.inflate(getViewLayout(), container, false);
         initData();
-        initView();
+        initView(mRootView);
         return mRootView;
     }
 
@@ -43,7 +43,7 @@ public abstract class BaseFragment extends Fragment {
     protected void initData() {
     }
 
-    protected void initView() {
+    protected void initView(View rootView) {
     }
 
     protected abstract void requestData();

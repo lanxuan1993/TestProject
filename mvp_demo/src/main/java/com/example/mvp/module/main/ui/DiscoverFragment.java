@@ -1,8 +1,9 @@
 package com.example.mvp.module.main.ui;
 
 import android.util.Log;
+import android.view.View;
 
-import com.example.mvp.R;
+import com.jiongbook.evaluation.R;
 import com.mvp.base.BaseFragment;
 
 public class DiscoverFragment extends BaseFragment {
@@ -29,8 +30,8 @@ public class DiscoverFragment extends BaseFragment {
     }
 
     @Override
-    protected void initView() {
-        super.initView();
+    protected void initView(View rootView) {
+        super.initView(rootView);
     }
 
     @Override

@@ -39,4 +39,8 @@ dependencies {
     api 'com.github.tbruyelle:rxpermissions:0.12'
     api 'io.reactivex.rxjava3:rxjava:3.0.4'
     api 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    //微信sdk
+    api 'com.tencent.mm.opensdk:wechat-sdk-android:+'
+
 }

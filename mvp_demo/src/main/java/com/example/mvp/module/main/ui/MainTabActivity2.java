@@ -11,10 +11,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Lifecycle;
 
-import com.example.mvp.R;
+
+import com.jiongbook.evaluation.R;
+import com.jiongbook.evaluation.databinding.ActivityMainTab2Binding;
+import com.jiongbook.evaluation.databinding.TabBottomGroupBinding;
 import com.mvp.base.BaseActivity;
-import com.example.mvp.databinding.ActivityMainTab2Binding;
-import com.example.mvp.databinding.TabBottomGroupBinding;
+
 import com.example.mvp.module.main.contract.MainContract;
 import com.example.mvp.module.main.presenter.MainPresenter;
 

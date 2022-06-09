@@ -89,6 +89,14 @@ public class WebViewHelper {
         }
     }
 
+    /**
+     * webview返回上一页
+     */
+    public void back(WebView webView){
+        if (webView.canGoBack()){
+            webView.goBack();
+        }
+    }
 
 //        //  防止跳浏览器
 //       wv.setWebViewClient(new WebViewClient() {

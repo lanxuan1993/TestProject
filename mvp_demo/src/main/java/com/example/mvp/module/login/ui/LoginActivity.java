@@ -2,7 +2,7 @@ package com.example.mvp.module.login.ui;
 
 import android.view.View;
 
-import com.example.mvp.R;
+import com.jiongbook.evaluation.R;
 import com.mvp.base.BaseActivity;
 import com.example.mvp.module.login.presenter.LoginPresenter;
 import com.example.mvp.module.login.contract.LoginContract;

@@ -11,7 +11,7 @@ import android.util.Log;
 import androidx.annotation.RequiresApi;
 import androidx.core.content.FileProvider;
 
-import com.example.tools.utils.EncryptionUtils;
+import com.example.tools.encryption.MD5Utils;
 import com.example.tools.utils.FileUtils;
 
 import java.io.File;
@@ -109,7 +109,7 @@ public class UriUtils {
      */
     public static Uri getCompressUri(Context context, String suffix) {
         String timeStamp = Long.toString(System.currentTimeMillis());
-        String fileName = EncryptionUtils.md5Decode32(timeStamp + "bhfile");
+        String fileName = MD5Utils.md5Encode32(timeStamp + "bhfile");
         String childPath = "/img/" + fileName + (TextUtils.isEmpty(suffix) ? ".jpg" : suffix);
         String filePath = FileUtils.getFilePath(context, Environment.DIRECTORY_PICTURES);
         File file = new File(filePath, childPath);

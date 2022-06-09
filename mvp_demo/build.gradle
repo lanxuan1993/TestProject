@@ -6,8 +6,9 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
+//    applicationId "com.example.mvp"
     defaultConfig {
-        applicationId "com.example.mvp"
+        applicationId "com.jiongbook.evaluation"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -23,9 +24,34 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    signingConfigs {
+        signingConfigs {
+            debug {
+                storeFile file('jiongbook.jks')
+                storePassword "yhr123"
+                keyAlias "key0"
+                keyPassword "yhr123"
+            }
+            release {
+                storeFile file('jiongbook.jks')
+                storePassword "yhr123"
+                keyAlias "key0"
+                keyPassword "yhr123"
+            }
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

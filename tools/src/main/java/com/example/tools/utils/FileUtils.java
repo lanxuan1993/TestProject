@@ -24,8 +24,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.text.DecimalFormat;
 import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -39,10 +37,6 @@ import static android.os.Environment.MEDIA_MOUNTED;
 public class FileUtils {
     public static final String TAG = "FileUtils";
 
-    public static final int SIZETYPE_B = 1;//获取文件大小单位为B的double值
-    public static final int SIZETYPE_KB = 2;//获取文件大小单位为KB的double值
-    public static final int SIZETYPE_MB = 3;//获取文件大小单位为MB的double值
-    public static final int SIZETYPE_GB = 4;//获取文件大小单位为GB的double值
     private static File file;
 
     /**
@@ -166,44 +160,6 @@ public class FileUtils {
     }
 
 
-    public static String getFileMD5(File file) {
-        if (!file.isFile()) {
-            return null;
-        }
-        MessageDigest digest;
-        FileInputStream in;
-        byte buffer[] = new byte[1024];
-        int len;
-        try {
-            digest = MessageDigest.getInstance("MD5");
-            in = new FileInputStream(file);
-            while ((len = in.read(buffer, 0, 1024)) != -1) {
-                digest.update(buffer, 0, len);
-            }
-            in.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-        return bytesToHexString(digest.digest());
-    }
-
-    private static String bytesToHexString(byte[] src) {
-        StringBuilder stringBuilder = new StringBuilder();
-        if (src == null || src.length <= 0) {
-            return null;
-        }
-        for (int i = 0; i < src.length; i++) {
-            int v = src[i] & 0xFF;
-            String hv = Integer.toHexString(v);
-            if (hv.length() < 2) {
-                stringBuilder.append(0);
-            }
-            stringBuilder.append(hv);
-        }
-        return stringBuilder.toString();
-    }
-
     /**
      * 获取文件指定文件的指定单位的大小
      *
@@ -224,7 +180,7 @@ public class FileUtils {
             e.printStackTrace();
             Log.e(TAG, "获取文件大小失败!");
         }
-        return formatFileSize(blockSize, sizeType);
+        return NumberFormatUtils.formatFileSize(blockSize, sizeType);
     }
 
     /**
@@ -246,7 +202,7 @@ public class FileUtils {
             e.printStackTrace();
             Log.e(TAG, "获取文件大小失败!");
         }
-        return formatFileSize(blockSize);
+        return NumberFormatUtils.formatFileSize(blockSize);
     }
 
 
@@ -290,59 +246,6 @@ public class FileUtils {
         return size;
     }
 
-    /**
-     * 转换文件大小
-     *
-     * @param fileSize
-     * @return
-     */
-    private static String formatFileSize(long fileSize) {
-        DecimalFormat df = new DecimalFormat("#.00");
-        String fileSizeString = "";
-        String wrongSize = "0B";
-        if (fileSize == 0) {
-            return wrongSize;
-        }
-        if (fileSize < 1024) {
-            fileSizeString = df.format((double) fileSize) + "B";
-        } else if (fileSize < 1048576) {
-            fileSizeString = df.format((double) fileSize / 1024) + "KB";
-        } else if (fileSize < 1073741824) {
-            fileSizeString = df.format((double) fileSize / 1048576) + "MB";
-        } else {
-            fileSizeString = df.format((double) fileSize / 1073741824) + "GB";
-        }
-        return fileSizeString;
-    }
-
-    /**
-     * 转换文件大小,指定转换的类型
-     *
-     * @param fileS
-     * @param sizeType
-     * @return
-     */
-    private static double formatFileSize(long fileS, int sizeType) {
-        DecimalFormat df = new DecimalFormat("#.00");
-        double fileSizeLong = 0;
-        switch (sizeType) {
-            case SIZETYPE_B:
-                fileSizeLong = Double.valueOf(df.format((double) fileS));
-                break;
-            case SIZETYPE_KB:
-                fileSizeLong = Double.valueOf(df.format((double) fileS / 1024));
-                break;
-            case SIZETYPE_MB:
-                fileSizeLong = Double.valueOf(df.format((double) fileS / 1048576));
-                break;
-            case SIZETYPE_GB:
-                fileSizeLong = Double.valueOf(df.format((double) fileS / 1073741824));
-                break;
-            default:
-                break;
-        }
-        return fileSizeLong;
-    }
 
 
     /**

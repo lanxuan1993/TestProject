@@ -11,9 +11,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.example.mvp.R;
+
 import com.example.widget.textview.CustomTextView;
 import com.google.android.material.tabs.TabLayout;
+import com.jiongbook.evaluation.R;
 
 import java.util.ArrayList;
 
